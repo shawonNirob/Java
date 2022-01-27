@@ -33,3 +33,25 @@ public class Main {
     }
 }
 //
+package first_package;
+
+public class Java {
+    public static void main(String[] args) {
+        myClass objectVariable = new myClass();
+        objectVariable.myFunction();
+        objectVariable.myFunction2();
+
+    }
+}
+/
+    package first_package;
+
+public class myClass {
+    public void myFunction(){
+        System.out.println("Handle myfunction");
+    }
+    public void myFunction2(){
+        System.out.println("Handle myFunction2");
+    }
+
+}
