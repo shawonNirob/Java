@@ -131,4 +131,78 @@ public class myClass {
 
 }
 //
-    
+ 
+package binary_search;
+
+public class BinarySearch {
+    public static void main(String[] args) {
+        int[] nums = new int[]{-1, 0, 3, 5, 9, 12};
+        int target = 9;
+        System.out.println(search(nums, target));
+    }
+
+    /*public static int search(int[] nums, int target) {
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }*/
+    public static int search(int[] nums, int target) {
+
+        /*if (nums.length == 0) {
+            return -1;
+        }
+
+        if (nums.length == 1) {
+            if (nums[0] != target) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }*/
+
+        int l = 0;
+        int h = nums.length-1;
+        int mid;
+
+        while (l <= h) {
+            mid = l + (h - l) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                l = mid + 1;
+            } else {
+                h = mid - 1;
+            }
+        }
+        return -1;
+    }
+}
+//
+package reverse_array;
+
+import java.util.Arrays;
+
+public class ReverseArray {
+    public static void main(String[] args) {
+        int temp,var;
+        int[] nums = new int[]{1,2,3,4,5,6,7,8,9};
+        for(int i=0; i< nums.length; i++){
+            temp=nums[i];
+            var=nums[(nums.length-1)-i];
+            nums[i]=var;
+            nums[(nums.length-1)-i]=temp;
+            if(i== (nums.length-1)/2){
+                break;
+
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+    }
+}
+//
+
