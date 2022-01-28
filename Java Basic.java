@@ -55,3 +55,80 @@ public class myClass {
     }
 
 }
+//
+// enter a input 
+package first_package;
+
+public class Java {
+    public static void main(String[] args) {
+        myClass objectVariable = new myClass();
+        objectVariable.inputNew();
+
+    }
+}
+/
+package first_package;
+
+import java.util.Scanner;
+
+public class myClass {
+    public void inputNew(){
+        //Create objectof Scanner
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        //Take in input
+        int a = input.nextInt();
+        System.out.println("Enter another number: ");
+        int b = input.nextInt();
+        int result = a + b;
+        System.out.println("The result: " + result);
+        //Close Scanner
+        input.close();
+
+    }
+
+}
+/
+    package first_package;
+
+import java.util.Scanner;
+
+public class myClass {
+    public void inputNew(){
+        //Create object of Scanner
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a double data: ");
+        //Take in input
+        double a = input.nextDouble();
+        System.out.println("Enter another number: ");
+        double b = input.nextDouble();
+        double result = a + b;
+        System.out.println("The result: " + result);
+        //Close Scanner
+        input.close();
+
+    }
+
+}
+/
+package first_package;
+
+import java.util.Scanner;
+
+public class myClass {
+    public void inputNew(){
+        //Create object of Scanner
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter text ");
+        //Take in input
+        String a = input.nextLine();
+        System.out.println("Enter another text ");
+        String b = input.nextLine();
+        System.out.println("The result: " + a +b);
+        //Close Scanner
+        input.close();
+    }
+
+}
+//
+    
