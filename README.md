@@ -1,2 +1,2 @@
-# Java_Basic
-Java basic opp
+# Java
+Java basic oop
