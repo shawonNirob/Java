@@ -204,3 +204,47 @@ public class Syntax {
 
 }
 //
+package com.one.java.syntax;
+import java.util.Scanner;
+public class BicycleDemo {
+    public static void main(String[] args) {
+        Syntax bike1 = new Syntax();
+        Syntax bike2 = new Syntax();
+        Syntax bike3 = new Syntax();
+        Syntax bike4 = new Syntax();
+
+        System.out.println(bike1.changeChadence(45,65,36));
+        bike2.changeChadence(98);
+        System.out.println(bike4.changeChadence(45, 69));
+
+    }
+}
+/
+package com.one.java.syntax;
+
+public class Syntax {
+    int cadence = 0;
+    int speed = 0;
+    int gear = 1;
+
+    void changeChadence(int value) {
+        cadence = value;
+        System.out.println("Cadence"+cadence);
+    }
+
+
+    float changeChadence(float time, float km) {
+        float p = km / time;
+        return p;
+    }
+    int changeChadence(int km, int time, int num) {
+        speed = km / time +num ;
+        return speed;
+    }
+    int changeChadence(int km, int num) {
+        speed = km + num ;
+        return speed;
+    }
+
+}
+//
