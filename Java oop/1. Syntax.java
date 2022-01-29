@@ -1,4 +1,4 @@
-//
+//Package Class
 ackage com.one.java.syntax;
 
 public class Syntax {
@@ -47,7 +47,7 @@ protected class Calculation {
         return result;
     }
 }
-//
+//import Scanner
 package com.one.java.syntax;
 import java.util.Scanner;
 public class Syntax {
@@ -65,7 +65,7 @@ public class Syntax {
         System.out.println(""+value.performSubtraction(6,3));
     }
 }
-/
+//method
 package com.one.java.syntax;
 
 public class Calculation {
@@ -113,7 +113,7 @@ public class Calculation {
         System.out.println(myObject.concat("", "Home"));
     }
 }
-//
+//object
 package com.one.java.syntax;
 import java.util.Scanner;
 public class BicycleDemo {
@@ -247,7 +247,7 @@ public class Syntax {
     }
 
 }
-//
+//constractor
 package com.one.java.syntax;
 import javax.naming.Name;
 import java.util.Scanner;
@@ -282,5 +282,200 @@ public class Student {
         age = studentAge;
 
     }
-    //
-    
+  //constructor
+  package first_package;
+
+public class myClass {
+    int sum;
+
+    public myClass(){
+        this(5,2);
+    }
+    public myClass(int n1, int n2){
+        this.sum=n1+n2;
+    }
+    void display(){
+        System.out.println("sum: "+sum);
+    }
+
+    public static void main(String[] args) {
+        myClass call = new myClass();
+        call.display();
+    }
+}
+//constructor
+package first_package;
+
+import javax.imageio.stream.ImageInputStream;
+
+public class myClass {
+    private int id;
+    private String name;
+    private double marks;
+
+    public myClass(int id) {
+        this.id = id;
+    }
+
+    public myClass(int id, double marks) {
+        this.id = id;
+        this.marks = marks;
+    }
+
+    public myClass(int id, double marks, String name) {
+        this.id = id;
+        this.marks = marks;
+        this.name = name;
+    }
+    void display1() {
+        System.out.println("id=" + id);
+    }
+
+    void display2() {
+        System.out.println("id=" + id + "\tmarks " + marks);
+    }
+
+    void display3() {
+        System.out.println("id=" + id + "\tname=" + name + "\tmarks " + marks);
+    }
+
+    public static void main(String[] args) {
+        myClass call1 = new myClass(5);
+        myClass call2 = new myClass(6, 56.5);
+        myClass call3 = new myClass(7, 75.6, "Nirob");
+        call1.display1();
+        call2.display2();
+        call3.display3();
+    }
+}
+//constructor
+//The main purpose of the constractor is initiallize the object
+//Every java class has a constractor(default constractor)
+//A constractor is autometically called at the time of object creation
+//non return type
+package first_package;
+
+import javax.imageio.stream.ImageInputStream;
+
+public class myClass {
+    private int id;
+    private String name;
+    private double marks;
+    /*
+    public myClass(int id) {
+        this.id = id;
+    }
+
+    public myClass(int id, double marks) {
+        this.id = id;
+        this.marks = marks;
+    }
+
+    public myClass(int id, double marks, String name) {
+        this.id = id;
+        this.marks = marks;
+        this.name = name;
+    }
+
+     */
+    void display1() {
+        System.out.println("id=" + id);
+    }
+
+    void display2() {
+        System.out.println("id=" + id + "\tmarks " + marks);
+    }
+
+    void display3() {
+        System.out.println("id=" + id + "\tname=" + name + "\tmarks " + marks);
+    }
+
+    public static void main(String[] args) {
+        myClass call1 = new myClass();
+        myClass call2 = new myClass();
+        myClass call3 = new myClass();
+        call1.display1();
+        call2.display2();
+        call3.display3();
+    }
+}
+//getter/setter
+package first_package;
+
+public class myClass {
+    private int id;
+    private String name;
+    private double marks;
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name){
+        this.name =name;
+    }
+    public double getMarks(){
+        return marks;
+    }
+    public void setMarks(double marks){
+        this.marks =marks;
+    }
+    public static void main(String[] args) {
+        myClass objEarn = new myClass();
+        objEarn.setId(1813010);
+        System.out.println("ID: "+objEarn.getId());
+        objEarn.setName("Nirob");
+        System.out.println("NAME: "+objEarn.getName());
+        objEarn.setMarks(45);
+        System.out.println("MARKS: "+objEarn.getMarks());
+
+    }
+}
+//static method
+package first_package;
+import java.util.Scanner;
+public class myClass {
+  public static int square(int n){
+      return n*n;
+  }
+
+  public static void main(String[] args) {
+      Scanner input =new Scanner(System.in);
+      System.out.println("Please enter a number: ");
+      int number =input.nextInt();
+      int square1 = myClass.square(number);
+      System.out.println("square: "+ square1);
+  }
+}
+//Non-static method
+package first_package;
+
+public class Circle {
+    private int radius;
+    public Circle(int radius){
+        this.radius = radius;
+    }
+    public double Calculation(){
+        return radius * radius * Math.PI;
+    }
+
+    public static void main(String[] args) {
+        Circle areaSolution = new Circle(10);
+        System.out.println("Area "+ areaSolution.Calculation());
+    }
+}
+//Import other Class another Package
+//Specific importing
+import com.one.java.syntax.BicycleDemo;
+
+//Wildcard importing
+//import other package's all class in a single package
+import com.one.java.syntax.*
+/**
+Close
+*/
