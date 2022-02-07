@@ -23,4 +23,3 @@ public class Bicycle {
         speed -= newValue;
     }
 }
-

@@ -1,10 +1,9 @@
 package learnExtends;
 
-public class MountainBike extends Bicycle {
+public class MountainBike extends Bicycle{
     public int height;
-
-    public MountainBike() {
-        super(56, 58, 59);
+    public MountainBike(){
+        super(56,58,59);
     }
 
     public int getHeight() {
@@ -15,11 +14,11 @@ public class MountainBike extends Bicycle {
         this.height = height;
     }
 
-    public void printValue() {
-        System.out.println("cadence : " + cadence);
-        System.out.println("gear : " + gear);
-        System.out.println("speed : " + speed);
-        System.out.println("height : " + height);
+    public void printValue(){
+        System.out.println("cadence : "+cadence);
+        System.out.println("gear : "+gear);
+        System.out.println("speed : "+speed);
+        System.out.println("height : "+height);
     }
 
 }
