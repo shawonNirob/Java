@@ -114,4 +114,57 @@ public class ParentMain {
         mountainBike.printValue();
     }
 }
+//Final class
+//learn super
+package learnSuper;
+
+public class CallClass {
+    public static void main(String[] args) {
+        Cylinder cal = new Cylinder();
+        System.out.println(cal.getArea());
+    }
+}
+/
+package learnSuper;
+
+public class Cylinder extends SubCLass {
+        double height;
+
+        public Cylinder() {
+            this.height = 7.0;
+        }
+
+        public Cylinder(double radius, String color, double height) {
+            super(radius, color);
+            this.height = height;
+        }
+
+        public double getArea() {
+            double area = 2 * Math.PI * radius * radius + 2 * super.getArea();
+            return area;
+        }
+    }
+    package learnSuper;
+
+    public class SubCLass {
+
+        double radius;
+        String color;
+
+        public SubCLass(double radius, String color) {
+            this.radius = radius;
+            this.color = color;
+        }
+
+        public SubCLass() {
+            this.radius = 4;
+            this.color = "RED";
+        }
+
+        public double getArea() {
+            return radius * radius * Math.PI;
+        }
+
+    }
 //
+
