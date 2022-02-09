@@ -116,6 +116,61 @@ public class ParentMain {
 }
 //Final class
 //learn super
+//if we pass input by constractor
+package learnSuper;
+
+public class CallClass {
+    public static void main(String[] args) {
+        Cylinder cal = new Cylinder(5,"VIOLET",40);
+        System.out.println(cal.getArea());
+    }
+}
+/
+package learnSuper;
+
+public class Cylinder extends SubCLass {
+        double height;
+
+        public Cylinder() {
+            this.height = 7.0;
+        }
+
+        public Cylinder(double radius, String color, double height) {
+            super(radius, color);
+            this.height = height;
+        }
+
+        public double getArea() {
+            System.out.println("Height: "+height);
+            double area = 2 * Math.PI * radius * radius + 2 * super.getArea();
+            return area;
+        }
+    }
+/
+package learnSuper;
+
+public class SubCLass {
+
+    double radius;
+    String color;
+
+    public SubCLass(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
+    }
+    public SubCLass() {
+        this.radius = 4;
+        this.color = "RED";
+    }
+
+    public double getArea() {
+        System.out.println("Radius: "+radius);
+        System.out.println("Color: "+color);
+        return radius * radius * Math.PI;
+    }
+
+}
+//if we don't pass input by constractor
 package learnSuper;
 
 public class CallClass {
@@ -140,31 +195,249 @@ public class Cylinder extends SubCLass {
         }
 
         public double getArea() {
+            System.out.println("Height: "+height);
             double area = 2 * Math.PI * radius * radius + 2 * super.getArea();
             return area;
         }
     }
-    package learnSuper;
+/
+package learnSuper;
 
-    public class SubCLass {
+public class SubCLass {
 
-        double radius;
-        String color;
+    double radius;
+    String color;
 
-        public SubCLass(double radius, String color) {
-            this.radius = radius;
-            this.color = color;
+    public SubCLass(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
+    }
+    public SubCLass() {
+        this.radius = 4;
+        this.color = "RED";
+    }
+
+    public double getArea() {
+        System.out.println("Radius: "+radius);
+        System.out.println("Color: "+color);
+        return radius * radius * Math.PI;
+    }
+
+}
+//learnSuper
+package learnSuper;
+
+public class SubCLass {
+
+    double radius;
+    String color;
+
+    public SubCLass(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
+    }
+
+    public SubCLass() {
+        this.radius = 4;
+        this.color = "RED";
+    }
+
+    public double getArea() {
+        return radius * radius * Math.PI;
+    }
+
+}
+/
+package learnSuper;
+
+public class Cylinder extends SubCLass {
+        double height;
+
+        public Cylinder() {
+            this.height = 7.0;
         }
 
-        public SubCLass() {
-            this.radius = 4;
-            this.color = "RED";
+        public Cylinder(double radius, String color, double height) {
+            super(radius, color);
+            this.height = height;
         }
 
         public double getArea() {
-            return radius * radius * Math.PI;
+            double area = 2 * Math.PI * radius * radius + 2 * super.getArea();
+            return area;
         }
+    }
+/
+package learnSuper;
+
+public class CallClass {
+    public static void main(String[] args) {
+        Cylinder cal = new Cylinder();
+        System.out.println(cal.getArea());
+    }
+}
+
+//without super
+
+package learnSuper;
+
+public class Car {
+    int speed = 50;
+}
+/
+package learnSuper;
+
+public class SportCar extends Car {
+    int speed = 100;
+
+    public void printSpeed() {
+        System.out.println("Speed: " + speed);
+    }
+}
+/
+package learnSuper;
+
+public class CarDemo {
+    public static void main(String[] args) {
+        SportCar cal = new SportCar();
+        cal.printSpeed();
 
     }
+
+}
+//Call with super
+package learnSuper;
+
+public class Car {
+    int speed = 50;
+}
+/
+package learnSuper;
+
+public class SportCar extends Car {
+    int speed = 100;
+
+    public void printSpeed() {
+        System.out.println("Speed: " + super.speed);
+    }
+}
+/
+package learnSuper;
+
+public class CarDemo {
+    public static void main(String[] args) {
+        SportCar cal = new SportCar();
+        cal.printSpeed();
+
+    }
+
+}
+//Call with super(print)
+package learnSuper;
+
+public class Car {
+    int speed = 50;
+    public void printSpeed(){
+        System.out.println("speed: "+speed);
+    }
+}
+/
+package learnSuper;
+
+public class SportCar extends Car {
+    int speed = 100;
+
+    public void printSpeed() {
+        super.printSpeed();
+        System.out.println("Speed: " +speed);
+    }
+}
+/
+package learnSuper;
+
+public class CarDemo {
+    public static void main(String[] args) {
+        SportCar cal = new SportCar();
+        cal.printSpeed();
+
+    }
+
+}
+//Print Value Using Super keyword
+package learnSuper;
+
+public class Car {
+    int speed = 50;
+    public Car(int speed){
+        //this.speed = speed;
+        //System.out.println("speed: "+speed);
+    }
+    public void printSpeed(){
+        System.out.println("speed: "+speed);
+    }
+}
+/
+package learnSuper;
+
+public class SportCar extends Car {
+    int speed = 100;
+
+    public SportCar(){
+        super(88);
+    }
+    public void printSpeed() {
+        super.printSpeed();
+        System.out.println("Speed: " +speed);
+    }
+}
+/
+package learnSuper;
+
+public class CarDemo {
+    public static void main(String[] args) {
+        SportCar cal = new SportCar();
+        cal.printSpeed();
+
+    }
+
+}
+//
+package learnSuper;
+
+public class Car {
+    int speed = 50;
+    public Car(int speed){
+        this.speed = speed;
+        //System.out.println("speed: "+speed);
+    }
+    public void printSpeed(){
+        System.out.println("speed: "+speed);
+    }
+}
+/
+package learnSuper;
+
+public class SportCar extends Car {
+    int speed = 100;
+
+    public SportCar(){
+        super(88);
+    }
+    public void printSpeed() {
+        super.printSpeed();
+        System.out.println("Speed: " +speed);
+    }
+}
+/
+package learnSuper;
+
+public class CarDemo {
+    public static void main(String[] args) {
+        SportCar cal = new SportCar();
+        cal.printSpeed();
+
+    }
+
+}
 //
 
