@@ -28,3 +28,51 @@ public class HashMapExample {
 
     }
 //
+package learnArrayList;
+
+import java.util.HashMap;
+
+public class learnHashMap {
+    public static void main(String[] args) {
+        HashMap<String, Integer> studentId = new HashMap<>();
+
+        studentId.put("James", 007);
+        studentId.put("Macmurdo", 100);
+        studentId.put("Raskolnikov", 2259);
+
+        System.out.println(studentId);
+    }
+}
+//
+package learnArrayList;
+
+import java.util.HashMap;
+
+public class learnHashMap {
+    public static void main(String[] args) {
+        HashMap<String, Integer> studentId = new HashMap<>();
+
+        studentId.put("James", 7);
+        studentId.put("Macmurdo", 100);
+        studentId.put("Raskolnikov", 2259);
+
+        System.out.println(studentId);
+        System.out.println(studentId.get("James"));
+        System.out.println(studentId.get("jerry"));
+
+        System.out.println(studentId.containsValue(7));
+        System.out.println(studentId.containsKey("James"));
+
+        studentId.replace("Macmurdo", 200);
+        studentId.replace("Mac", 500);
+
+        System.out.println(studentId);
+
+        studentId.putIfAbsent("Jhon", 444);
+        System.out.println(studentId);
+
+        studentId.remove("Jhon");
+        System.out.println(studentId);
+    }
+}
+//
