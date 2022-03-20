@@ -1,3 +1,6 @@
+//this is like a matrix[][] 
+
+//Rowwise
 package learnArrayList;
 
 import java.util.ArrayList;
@@ -26,5 +29,34 @@ public class LIstList {
         }
     }
 }
-//
+//Columnwise
+package learnArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class LIstList {
+    public static void main(String[] args) {
+        int colSize = 3;
+        int rowSize = 2;
+        Scanner input = new Scanner(System.in);
+        List<List<Integer>> arr = new ArrayList<>();
+        for(int i =0; i<colSize; i++){
+            List<Integer> arrRow  = new ArrayList<>();
+            for(int j =0; j<rowSize; j++){
+                int x = input.nextInt();
+                arrRow.add(x);
+            }
+            arr.add(arrRow);
+        }
+        for(int i =0; i<rowSize; ++i){
+            for(int j=0; j<colSize; ++j){
+                System.out.print(arr.get(j).get(i)+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
 
