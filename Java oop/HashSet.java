@@ -21,5 +21,12 @@ public class learnHashSet {
         set.add("Picaso");
         set.add("Netflix");
         System.out.println(set);
+
+        set.remove("Picaso");
+        System.out.println(set);
+
+        System.out.println(set.contains("Picaso"));
+        System.out.println(set.contains("Netflix"));
+
     }
 }
