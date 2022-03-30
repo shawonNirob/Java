@@ -1,3 +1,25 @@
+//package leetCode;
+
+public class RandomNode {
+    public static void main(String[] args) {
+        int n1=200;
+        int n2=10;
+        System.out.println(Math.random()*(n2));
+        int n = (int)(Math.random());
+        System.out.println(n);
+        
+        //Random Number between two Number
+        int min = 2;
+        int max = 4;
+        System.out.println(Math.random()*(max-min+1)+min);
+        
+        
+        System.out.println(Math.floor(Math.random()*(max-min+1)+min));
+        System.out.println(Math.ceil(Math.random()*(max-min+1)+min));
+    }
+}
+//
+
 package com.company;
 
 public class Main {
