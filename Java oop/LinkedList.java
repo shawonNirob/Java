@@ -24,6 +24,8 @@ public class LinkedListDemo {
         l.add(0,60);
         l.addFirst(200);
         System.out.println(l);
+        l.addLast(300);
+        System.out.println(l);
         l.remove(3);
         System.out.println(l);
     }
