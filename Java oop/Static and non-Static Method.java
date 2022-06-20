@@ -3,6 +3,7 @@ package learnJavaClass;
 public class StaticClass {
     private int a=9;
     private static int b=10;
+    
     public static void disp(){
         System.out.println(b);
     }
