@@ -1,9 +1,8 @@
 package learnJavaClass;
 
-public class StaticClass {
+public class StaticMethod {
     private int a=9;
     private static int b=10;
-    
     public static void disp(){
         System.out.println(b);
     }
@@ -12,9 +11,9 @@ public class StaticClass {
     }
 
     public static void main(String[] args) {
-        StaticClass.disp();
+        StaticMethod.disp();
 
-        StaticClass nonStatic = new StaticClass();
+        StaticMethod nonStatic = new StaticMethod();
         nonStatic.show();
     }
 }
