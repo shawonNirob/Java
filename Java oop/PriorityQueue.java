@@ -41,3 +41,35 @@ public class priorityQueueDemo {
         System.out.println(pq);
     }
 }
+
+//
+
+package collectionFramework;
+
+import java.util.*;
+
+public class priorityQueueDemo {
+    public static void main(String[] args) {
+        //Queue<Map.Entry<String,Integer>> pq = new PriorityQueue<>(Map.Entry.comparingByValue(Collections.reverseOrder()));
+        //Queue<Map.Entry<String,Integer>> pq = new PriorityQueue<>(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+        //Queue<Map.Entry<String,Integer>> pq = new PriorityQueue<>(Map.Entry.comparingByValue());
+
+        Queue<Map.Entry<String,Integer>> pq = new PriorityQueue<>(Map.Entry.comparingByKey(Collections.reverseOrder()));
+        //Queue<Map.Entry<String,Integer>> pq = new PriorityQueue<>(Map.Entry.comparingByKey());
+
+        pq.add(new AbstractMap.SimpleEntry<>("P", 20));
+        pq.add(new AbstractMap.SimpleEntry<>("Q", 10));
+        pq.add(new AbstractMap.SimpleEntry<>("R", 15));
+        pq.add(new AbstractMap.SimpleEntry<>("S", 30));
+
+        System.out.println(pq);
+
+        System.out.println(pq.peek());
+        System.out.println(pq.poll());
+        System.out.println(pq.peek());
+
+        System.out.println(pq);
+    }
+}
+
+
