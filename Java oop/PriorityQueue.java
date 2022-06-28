@@ -16,3 +16,28 @@ public class PriorityQueueDemo {
 
     }
 }
+
+//
+package collectionFramework;
+
+import java.util.Collections;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class priorityQueueDemo {
+    public static void main(String[] args) {
+        //PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        Queue<Integer> pq = new PriorityQueue<>((a,b) -> b-a);
+        //Queue<Integer> pq = new PriorityQueue<>();
+        pq.add(7);
+        pq.add(9);
+        pq.add(36);
+        pq.add(3);
+        pq.add(100);
+
+        System.out.println(pq.peek());
+        System.out.println(pq.poll());
+        System.out.println(pq.peek());
+        System.out.println(pq);
+    }
+}
