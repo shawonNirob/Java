@@ -27,5 +27,7 @@ public class StringBuilderDemo {
 
         test.reverse();
         System.out.println(test);
+        
+        System.out.println(test.substring(1,test.length()-1));
     }
 }
