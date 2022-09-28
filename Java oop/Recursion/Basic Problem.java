@@ -54,4 +54,35 @@ public class PrintName {
     }
 }
 
+//All Subsets
+4.
+package recursion;
 
+import java.util.LinkedList;
+import java.util.List;
+
+public class PrintName{
+    public void helper(int index, int[] arr, LinkedList<Integer> list, int n){
+        if(index >= n){
+            System.out.println(list);
+            return;
+        }
+
+        list.add(arr[index]);
+        helper(index+1, arr, list, n);
+        list.removeLast();
+        helper(index+1, arr, list, n);
+    }
+
+    public static void main(String[] args){
+        PrintName cal = new PrintName();
+        LinkedList<Integer> list = new LinkedList<>();
+        int[] arr = {2,2,2,2,3,4,5};
+        int n = arr.length;
+        cal.helper(0, arr, list, n);
+    }
+}
+
+
+
+//
