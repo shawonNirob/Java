@@ -85,4 +85,43 @@ public class PrintName{
 
 
 
-//
+//K sum
+5.
+package recursion;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class PrintName{
+    public boolean helper(int index, int[] arr, LinkedList<Integer> list, int n, int sum, int k){
+        if(index >= n){
+            if(sum == k){
+                System.out.println(sum);
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        list.add(arr[index]);
+        sum += arr[index];
+        if(helper(index+1, arr, list, n, sum, k)) return true;
+        list.removeLast();
+        sum -= arr[index];
+        if(helper(index+1, arr, list, n, sum, k)) return true;
+
+        return false;
+    }
+
+    public static void main(String[] args){
+        PrintName cal = new PrintName();
+        LinkedList<Integer> list = new LinkedList<>();
+        int[] arr = {2,1,3};
+        int n = arr.length;
+        if(cal.helper(0, arr, list, n, 0, 3)){
+            System.out.println(true);
+        };
+    }
+}
+
+
