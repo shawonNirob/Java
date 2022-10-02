@@ -124,4 +124,80 @@ public class PrintName{
     }
 }
 
+//K sum subsets number with subsets
+6.
+    package recursion;
 
+import java.util.LinkedList;
+import java.util.List;
+
+public class PrintName{
+    public int helper(int index, int[] arr, LinkedList<Integer> list, int n, int sum, int k){
+        if(index >= n){
+            if(sum == k){
+                System.out.println(list);
+                return 1;
+            }else{
+                return 0;
+            }
+        }
+
+        list.add(arr[index]);
+        sum += arr[index];
+        int l = helper(index+1, arr, list, n, sum, k);
+        list.removeLast();
+        sum -= arr[index];
+        int r = helper(index+1, arr, list, n, sum, k);
+
+        return l+r;
+    }
+
+    public static void main(String[] args){
+        PrintName cal = new PrintName();
+        LinkedList<Integer> list = new LinkedList<>();
+        int[] arr = {2,1,3};
+        int n = arr.length;
+        int s = cal.helper(0, arr, list, n, 0, 3);
+        System.out.println(s);
+    }
+}
+
+
+////K sum subsets number without subsets
+7.
+package recursion;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class PrintName{
+    public int helper(int index, int[] arr, int n, int sum, int k){
+        if(index >= n){
+            if(sum == k){
+                return 1;
+            }else{
+                return 0;
+            }
+        }
+
+        sum += arr[index];
+        int l = helper(index+1, arr,  n, sum, k);
+
+        sum -= arr[index];
+        int r = helper(index+1, arr,  n, sum, k);
+
+        return l+r;
+    }
+
+    public static void main(String[] args){
+        PrintName cal = new PrintName();
+        int[] arr = {2,1,3};
+        int n = arr.length;
+        int s = cal.helper(0, arr, n, 0, 3);
+        System.out.println(s);
+    }
+}
+
+
+
+//
