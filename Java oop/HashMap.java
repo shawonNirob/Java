@@ -13,8 +13,8 @@ public class MapEntry {
 
         for(Map.Entry<Integer, Integer> entry: map.entrySet()){
             int num = entry.getKey();
-            int key = entry.getValue();
-            System.out.print(num+"->"+key+" ");
+            int value = entry.getValue();
+            System.out.print(num+"->"+value+" ");
         }
     }
 
